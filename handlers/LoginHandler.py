@@ -20,7 +20,7 @@ class Authorization(BaseHandler):
 		url_queries = self.request.GET
 		state = url_queries['state']
 		code = url_queries['code']
-		url = 'https://github.com/login/oauth/access_token?client_id=5a4a66d84435ef705a81&client_secret=5c184ad769eae63029caef8d1f5d0708aa5d8145&redirect_uri=http://localhost:8080/authorization&scope=user,public_repo&code='+str(code)
+		url = 'https://github.com/login/oauth/access_token?client_id=5a4a66d84435ef705a81&client_secret=5c184ad769eae63029caef8d1f5d0708aa5d8145&redirect_uri=http://www.openflock.co/authorization&scope=user,public_repo&code='+str(code)
 		req = requests.post(url,headers=headers)
 		req = str(req.content)
 		access_token = ""
