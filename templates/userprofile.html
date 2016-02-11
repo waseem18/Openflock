@@ -1,0 +1,156 @@
+<!doctype html>
+<html>
+{% for ud in userdata %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js">
+    </script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="../dist/semantic.css">
+    <link rel="stylesheet" href="../dist/semantic.min.css">
+    <link rel="stylesheet" href="/css/stylesidebar.css">
+    <script src="/js/modernizr.js"></script>
+    <script src="../dist/semantic.js"></script>
+    <script src="../dist/semantic.min.js"></script>
+
+    <title>Profile -{{ud.fullname}} Openflock</title>
+</head>
+
+<body>
+
+
+    <header class="cd-main-header" style="z-index: 2000">
+        <a href="/" class="cd-logo"><img src="../images/logo.png" alt="Logo" width="150px" height="35px" style="margin-top: -6px;">
+        </a>
+
+        {% if navfullname %}
+        <a href="#0" class="cd-nav-trigger">Menu<span></span></a>
+
+        <nav class="cd-nav">
+            <ul class="cd-top-nav">
+
+                <li><a href="/">Home</a>
+                </li>
+                <li><a href="/mypromotedrepos">Activity</a>
+                </li>
+                <li class="has-children account">
+                    <a href="#">
+                        <img src="{{avatar_url}}" alt="avatar"> {{navfullname}}
+                    </a>
+
+                    <ul>
+
+                        <li><a href="http://www.openflock.co/profile/{{navusername}}">My Account</a>
+                        </li>
+                        <li><a href="/mypromotedrepos">Activity</a>
+                        </li>
+                        <li><a href="/logout">Logout</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        {% endif %}
+    </header>
+
+    <main class="cd-main-content">
+
+        <div class="content-wrapper" style="margin-top: 20px;">
+
+
+        </div>
+    </main>
+
+
+    <div style="margin-left: 270px; width: 850px;">
+        <div class="ui massive message">
+            <div class="ui medium header" style="float: center">{{ud.fullname}}</div>
+            <a href="https://github.com/{{ud.username}}" class="ui tiny header" style="float: center; color: gray">@{{ud.username}}</a> 
+            {% if len_lang_list == 0 %}
+            <p style="color: gray; font-size: 19px">{{ud.fullname}} is an Opensource newbie.</p>
+            {% else %}
+            <p style="color: gray; font-size: 19px">{{ud.fullname}} is an Opensource enthusiast who likes to code in {% for i in lang_list %} {{i}} {% endfor %}
+            </p>
+            {% endif %}
+
+
+            <br>
+
+            <a class="github-button" href="https://github.com/{{ud.username}}" data-style="mega" data-count-href="/{{ud.username}}/followers" data-count-api="/users/{{ud.username}}#followers" data-count-aria-label="# followers on GitHub" aria-label="Follow @{{ud.username}} on GitHub">Follow @{{ud.username}}</a>
+            {% if ud.fullname == navfullname %}
+            <button style="float: right" class="ui primary button">
+                <a style="color: white" href="https://twitter.com/intent/tweet?hashtags=Openflock, Github, Opensource&text=Here's my profile on Openflock.&url=http://www.openflock.co/profile/{{ud.username}} Start promoting your GitHub repositories on Openflock"><h2 style"color: white">Share</h2></a>
+            </button>
+            {% else %}
+            <button style="float: right" class="ui primary button">
+                <a style="color: white" href="https://twitter.com/intent/tweet?hashtags=Openflock, Github, Opensource&text=This profile looks interesting.&url=http://www.openflock.co/profile/{{ud.username}} Start promoting your GitHub repositories on Openflock"><h2 style"color: white">Share</h2></a>
+            </button>
+
+            {% endif %}
+        </div>
+
+        {% if noofrepos == 0 %}
+        <h2 style="color: black; text-align: center">You don't have any repositories on GitHub.</h2>
+        <h2 style="color: black; text-align: center">So...Why don't start contributing to the issue/project that inspires you from the promoted repositories/issues?!</h2> {% endif %}
+        <div class="ui divider"></div>
+
+        {% for rd in repodata %}
+        <a href="https://github.com/{{ud.username}}/{{rd.reponame}}"><h3 style="font-size: 22px; color: black">{{rd.reponame}}</h3></a>
+        
+        {% if navfullname == ud.fullname %}
+        <button style="float: right" class="ui primary button">
+            <a href="/promote/{{rd.reponame}}?project=user"><h3 style="color: white">Promote</h3></a>
+        </button>
+        {% endif %}
+
+        <p>{{rd.language}}</p>
+        <p style="color: gray">{{rd.description}}</p>
+        <div class="ui divider"></div>
+        {% endfor %}
+        <br>
+
+
+        <h2 style="color: black; text-align: center">Trying to promote a repository from an Organization?</h2>
+        <h2 style="text-align: center; color: black">Enter the URL of the repo here</h2>
+        <form method="GET" action="/promote_verify">
+            <div class="ui fluid action input">
+                <input name="url_entered" type="text" placeholder="Enter the URL of the repository..." REQUIRED>
+                <button type="submit">Promote</button>
+            </div>
+        </form>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+    </div>
+
+    <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
+    <script src="/js/jquery-2.1.4.js"></script>
+    <script src="/js/jquery.menu-aim.js"></script>
+    <script src="/js/main.js"></script>
+    {% endfor %}
+</body>
+
+</html>

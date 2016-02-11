@@ -1,0 +1,279 @@
+<!doctype html>
+<html>
+<head>
+    {% for ud in userdata %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"> </script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+     <!-- CSS reset -->
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="../dist/semantic.css">
+    <link rel="stylesheet" href="../dist/semantic.min.css">
+    <link rel="stylesheet" href="/css/stylesidebar.css">
+    <script src="/js/modernizr.js"></script> 
+        <script src="../dist/semantic.js"></script>
+    <script src="../dist/semantic.min.js"></script>
+
+    <title>Promoting | CodyHouse</title>
+    <style>
+    input::-webkit-input-placeholder {
+   font-size: 15px;}
+   input::-webkit-textarea-placeholder{
+    font-size: 100%;}
+
+    </style>
+
+    <style>
+   textarea{
+    font-size: 15px;}
+    </style>
+    <script type='text/javascript'>
+CharacterCount = function(TextArea,FieldToCount){
+  var myField = document.getElementById(TextArea);
+  var myLabel = document.getElementById(FieldToCount); 
+  if(!myField || !myLabel){return false}; // catches errors
+  var MaxChars =  myField.maxLength;
+  if(!MaxChars){MaxChars =  myField.getAttribute('maxlength') ; };  if(!MaxChars){return false};
+  var remainingChars =   MaxChars - myField.value.length
+  myLabel.innerHTML = remainingChars+" characters remaining of maximum "+MaxChars
+}
+
+setInterval(function(){CharacterCount('content_txt','message')},55);
+</script>
+</head>
+
+<body>
+
+
+
+
+<header class="cd-main-header" style="z-index: 2000">
+        <a href="/" class="cd-logo"><img src="../images/logo.png" alt="Logo" width="150px" height="35px" style="margin-top: -6px;"></a>
+        
+        
+
+        <a href="#0" class="cd-nav-trigger">Menu<span></span></a>
+
+        <nav class="cd-nav">
+            <ul class="cd-top-nav">
+                <li><a href="/">Home</a></li>
+                <li><a href="/mypromotedrepos">Activity</a></li>
+                <li class="has-children account">
+                    <a href="#0">
+                        <img src="{{ud.avatar_url}}" alt="avatar">
+                        {{ud.fullname}}
+                    </a>
+
+                    <ul>
+
+                        <li><a href="/profile/{{ud.username}}">My Account</a></li>
+                        <li><a href="/mypromotedrepos">Activity</a></li>
+                        <li><a href="/logout">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="cd-main-content">
+
+        <div class="content-wrapper" style="margin-top: 20px;">
+            
+
+        </div> 
+    </main> 
+
+
+
+
+
+
+
+
+
+
+
+
+<form method="POST" action="">
+
+
+<div style="margin-left: 270px; width: 850px;">
+<div class="ui massive message">
+    {% if flag %}
+    <input type="hidden" value="{{flag}}" name="issue">
+    <input type="hidden" value="{{issue_state}}" name="state">
+    <input type="hidden" value="{{issue_title}}" name="issue_title">
+  <div class="ui medium header" style="float: center">{{issue_title}}</div>
+  <input type="hidden" value="{{issue_description}}" name="issue_description">
+  <p style="color: gray; font-size: 19px">{{issue_description}}</p>
+  {% else %}
+  <input type="hidden" value="none" name="issue">
+  <input type="hidden" value="none" name="state">
+  <div class="ui medium header" style="float: center">{{reponame}}</div>
+  <input type="hidden" value="{{reponame}}" name="issue_title">
+  <p style="color: gray; font-size: 19px">{{description}}</p>
+  <input type="hidden" value="{{description}}" name="issue_description">
+  {% endif %}
+
+  {% if language %}
+  <p style="color: black; font-size: 19px">{{language}}</p>
+  <input type="hidden" value="{{language}}" name="language">
+  {% endif %}
+
+  {% if flag %}
+  <p style="color: blue; font-size: 19px">{{url_entered}}</p>
+  <input type="hidden" value="{{url_entered}}" name="url_entered">
+  {% else %}
+  <p style="color: blue; font-size: 19px">{{repo_html_url}}</p>
+  <input type="hidden" value="{{repo_html_url}}" name="url_entered">
+  {% endif %}
+  
+<!--a class="github-button" href="https://github.com/ntkme/github-buttons" data-icon="octicon-star" data-style="mega" data-count-href="/ntkme/github-buttons/stargazers" data-count-api="/repos/ntkme/github-buttons#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star ntkme/github-buttons on GitHub">Star</a>
+&nbsp;&nbsp;
+
+<a class="github-button" href="https://github.com/ntkme/github-buttons/fork" data-icon="octicon-repo-forked" data-style="mega" data-count-href="/ntkme/github-buttons/network" data-count-api="/repos/ntkme/github-buttons#forks_count" data-count-aria-label="# forks on GitHub" aria-label="Fork ntkme/github-buttons on GitHub">Fork</a>
+&nbsp;&nbsp;
+
+<a class="github-button" href="https://github.com/ntkme/github-buttons" data-icon="octicon-eye" data-style="mega" data-count-href="/ntkme/github-buttons/watchers" data-count-api="/repos/ntkme/github-buttons#subscribers_count" data-count-aria-label="# watchers on GitHub" aria-label="Watch ntkme/github-buttons on GitHub">Watch</a-->
+
+</div>
+
+
+<div class="ui form">
+  <div class="grouped fields">
+    <label><h2>Reason to promote the repository!</h2></label>
+    <div class="field">
+      <div class="ui radio checkbox">
+        <input type="radio" name="reason" value="ResolveAnIssue" checked="checked" REQUIRED>
+        <label><p style="font-size: 14px;">ResolveIssue</p></label>
+      </div>
+    </div>
+    <div class="field">
+      <div class="ui radio checkbox">
+        <input type="radio" name="reason" value="FeatureRequest">
+        <label><p style="font-size: 14px;">FeatureRequest</p></label>
+      </div>
+    </div>
+    <div class="field">
+      <div class="ui radio checkbox">
+        <input type="radio" name="reason" value="CodeRefactoring">
+        <label><p style="font-size: 14px;">CodeRefactoring</p></label>
+      </div>
+    </div>
+    <div class="field">
+      <div class="ui radio checkbox">
+        <input type="radio" name="reason" value="JustPromoting">
+        <label><p style="font-size: 14px;">JustPromoting</p></label>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<div class="ui divider"></div>
+<br>
+<div id="isbeginner">
+  <label><h2>Is the Issue for Beginners?</h2></label>
+  <input type="radio" name="isbeginner" value="Beginner">&nbsp;Beginner level&nbsp;&nbsp;
+  <input type="radio" name="isbeginner" value="Not_Beginner">&nbsp;Not a beginner level&nbsp;&nbsp;
+  <input type="radio" name="isbeginner" value="Not_Related">&nbsp;Not related
+</div>
+<br>
+
+{% if language == "" %}
+<div class="ui divider"></div>
+<div id="lang_if_not_selected">
+  <label><h2>Select  the language</h2></label>
+  
+  <select name="language" REQUIRED>
+  <option>Select a language</option>
+  <option value="Python">Python</option>
+  <option value="Java">Java</option>
+  <option value="C">C</option>
+  <option value="C++">C++</option>
+  <option value="C#">C#</option>
+  <option value="Objective-C">Objective-C</option>
+  <option value="Rust">Rust</option>
+  <option value="Ruby">Ruby</option>
+  <option value="HTML">HTML</option>
+  <option value="CSS">CSS</option>
+  <option value="JavaScript">JavaScript</option>
+  <option value="Perl">Perl</option>
+  <option value="PHP">PHP</option>
+  <option value="Shell">Shell</option>
+  <option value="Erlang">Erlang</option>
+  <option value="Scala">Scala</option>
+  <option value="Go">Go</option>
+  <option value="not_related">Not related</option>
+  </select>
+</div>
+{% endif %}
+<br>
+<div class="ui divider"></div>
+
+<div id="genre">
+  <label><h2>Select a genre of the project/issue</h2></label>
+<select name="genre">
+  <option value="0">Select a genre</option> 
+  <option value="Appengine">Appengine</option> 
+  <option value="Django">Django</option>
+  <option value="Webapp2">Webapp2</option>
+  <option value="Rails">Ruby on Rails</option> 
+  <option value="WebRTC">WebRTC</option>
+  <option value="Node_module">Node_module</option>
+  <option value="Python_package">Python package</option> 
+  <option value="Javascript_library">Javascript library</option>
+  <option value="Normal_script">Normal script</option>
+  <option value="A_Product">A Product</option>
+  <option value="Machine_Learning">Machine Learning</option>
+</select>
+<br>
+
+<div class="ui divider"></div>
+<br>
+
+    <label><h2>Explain in short about what need to be resolved (or done)</h2></label>
+    <textarea id="content_txt" maxlength="300" rows="6" cols="70" name="detailed_reason" placeholder="Enter the details in breif about what needs to be resolved..." REQUIRED></textarea>
+    <p id="message"></p>
+  
+<div class="ui divider"></div>
+
+
+<br>
+<label><h2>How can contributors contact you? (Eg: Gitter link, GitHub Issues link, Slack...)</h2></label>
+    <input type="radio" name="contact_way" value="mail"><span style="font-size: 15px;" REQUIRED>Email</span>&nbsp;&nbsp;
+    <input type="radio" name="contact_way" value="link"><span style="font-size: 15px;">Link</span>
+<div class="ui form">
+  <div class="field">
+    <!--label><h2>How can contributors contact you? (Eg: Gitter link, GitHub Issues link, Slack...)</h2></label>
+    <input type="radio" name="contact_way" value="mail"><span style="font-size: 15px;" REQUIRED>Email</span>&nbsp;&nbsp;
+    <input type="radio" name="contact_way" value="link"><span style="font-size: 15px;">Link</span-->
+    <div class="ui large input">
+  <input style="font-size: 18px;" type="text" name="contact_link" placeholder="GitHub issues link, Gitter link, Email, Slack link...." REQUIRED>
+</div>
+  </div>
+</div>
+<br>
+<br>
+<br>
+<button type="submit" class="ui primary button">
+  <h2>Promote repository</h2>
+</button>
+</form>
+<br>
+<br>
+<br>
+<br>
+</div>
+
+
+<script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
+<script src="/js/jquery-2.1.4.js"></script>
+<script src="/js/jquery.menu-aim.js"></script>
+<script src="/js/main.js"></script>
+{% endfor %}
+</body>
+</html>

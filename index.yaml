@@ -1,0 +1,6 @@
+indexes:
+- kind: PromotedRepos
+  properties:
+  - name: language_tag
+  - name: promoted_time
+    direction: desc 
