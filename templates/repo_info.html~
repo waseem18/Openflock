@@ -105,13 +105,18 @@
 
 <div class="ui massive message">
   <h2><span style="color: black">Reason to promote : </span>{{rd.simple_reason}}</h2>
+<br>
   <h2><span style="color: black">Language : </span>{{rd.language}}</h2>
+<br>
 {% if genre %}
   <h2><span style="color: black">Genre : </span>{{rd.genre}}</h2>
+<br>
 {% endif %}
   <h2><span style="color: black">Detailed reason : </span>{{rd.detailed_reason}}</h2>
+<br>
 {% if difficulty %}
   <h2><span style="color: black">Difficulty: </span>{{rd.is_beginner}}</h2>
+<br>
 {% endif %}
   <h2><span style="color: black">Link to contact : </span><a target="_blank" href="{{rd.contact_link}}">{{rd.contact_link}}</a></h2>
 

@@ -71,7 +71,7 @@ setInterval(function(){CharacterCount('content_txt','message')},55);
                     <ul>
 
                         <li><a href="/profile/{{ud.username}}">My Account</a></li>
-                        <li><a href="/auth_redirect">Refresh</a></li>
+                        <li><a href="/mypromotedrepos">Activity</a></li>
                         <li><a href="/logout">Logout</a></li>
                     </ul>
                 </li>

@@ -28,3 +28,6 @@ class MainHandler(BaseHandler):
 			
 			
 			
+class About(BaseHandler):
+    def get(self):
+        self.render('about.html')

@@ -8,7 +8,7 @@ from models import *
 
 class AuthRedirect(BaseHandler):
 	def get(self):
-			self.redirect('https://github.com/login/oauth/authorize?state=openflock&redirect_uri=http://www.openflock.co/authorization&client_id=5a4a66d84435ef705a81&scope=user,public_repo')
+			self.redirect('https://github.com/login/oauth/authorize?state=openflock&redirect_uri=http://www.openflock.co/authorization&client_id=5a4a66d84435ef705a81&scope=')
 
 
 class Authorization(BaseHandler):
@@ -20,7 +20,7 @@ class Authorization(BaseHandler):
 		url_queries = self.request.GET
 		state = url_queries['state']
 		code = url_queries['code']
-		url = 'https://github.com/login/oauth/access_token?client_id=5a4a66d84435ef705a81&client_secret=5c184ad769eae63029caef8d1f5d0708aa5d8145&redirect_uri=http://www.openflock.co/authorization&scope=user,public_repo&code='+str(code)
+		url = 'https://github.com/login/oauth/access_token?client_id=5a4a66d84435ef705a81&client_secret=5c184ad769eae63029caef8d1f5d0708aa5d8145&redirect_uri=http://www.openflock.co/authorization&scope=&code='+str(code)
 		req = requests.post(url,headers=headers)
 		req = str(req.content)
 		access_token = ""

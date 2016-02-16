@@ -328,7 +328,7 @@
           <div class="column">
             
             <div class="ui inverted link list">
-              <a class="item" href="https://github.com/waseem18/Openflock#openflock">About</a>
+              <a class="item">About</a>
               <a class="item">Blog</a>
               <a class="item" href="mailto:wasim@thabraze.me" target="_blank">Contact</a>
             </div>
