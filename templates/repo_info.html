@@ -82,7 +82,10 @@
   
   <p style="color: gray; font-size: 19px">{{rd.description}}</p>
   <p style="color: blue; font-size: 19px"><a href="/redirecting/{{rd.uid}}?url={{rd.repo_html_url}}" target="_blank">{{rd.repo_html_url}}</a></p>
+  
+  {% if rd.language %}
   <p style="color: black; font-size: 19px">Language : {{rd.language}}</p>
+  {% endif %}
   <p style="color: black; font-size: 19px"><a href="{{rd.contact_link}}" target="_blank">Contact {{rd.promoting_user}}</a></p>
   
 <a class="github-button" href="https://github.com/ntkme/github-buttons" data-icon="octicon-star" data-style="mega" data-count-href="/ntkme/github-buttons/stargazers" data-count-api="/repos/ntkme/github-buttons#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star ntkme/github-buttons on GitHub">Star</a>
@@ -93,9 +96,8 @@
 
 <a class="github-button" href="https://github.com/ntkme/github-buttons" data-icon="octicon-eye" data-style="mega" data-count-href="/ntkme/github-buttons/watchers" data-count-api="/repos/ntkme/github-buttons#subscribers_count" data-count-aria-label="# watchers on GitHub" aria-label="Watch ntkme/github-buttons on GitHub">Watch</a>
 {% if username == rd.promoting_user %}
-<button style="float: right" class="ui primary button">
-  <a href="/edit/{{rd.uid}}?issue={{rd.issue}}&url={{rd.repo_html_url}}" style="color: white"><h2>Edit details</h2></a>
-</button><br>
+  <a class = "large ui blue button" href="/edit/{{rd.uid}}?issue={{rd.issue}}&url={{rd.repo_html_url}}" style="color: white; float: right"><h2>Edit details</h2></a>
+  <br>
 
 {% endif %}
 <p style="color: gray; font-size: 19px"><span style="color: black">Views: </span>{{rd.views_of}}</p>
@@ -103,7 +105,7 @@
 
 
 
-<div class="ui massive message">
+<!--div class="ui massive message">
   <h2><span style="color: black">Reason to promote : </span>{{rd.simple_reason}}</h2>
   <h2><span style="color: black">Language : </span>{{rd.language}}</h2>
 {% if genre %}
@@ -115,7 +117,48 @@
 {% endif %}
   <h2><span style="color: black">Link to contact : </span><a target="_blank" href="{{rd.contact_link}}">{{rd.contact_link}}</a></h2>
 
-</div>
+</div-->
+
+
+
+
+
+<table class="ui celled striped table">
+  <thead>
+    <tr><th colspan="2">
+      Details
+    </th>
+  </tr></thead>
+
+  <tbody>
+    <tr>
+      <td class="collapsing"><b>Reason to promote</b></td>
+      <td>{{rd.simple_reason}}</td>
+    </tr>
+    {% if genre %}
+    <tr>
+    <td><b>Genre</b></td>
+    <td>{{rd.genre}}</td>
+    </tr>    
+    {% endif %}
+    <tr>
+      <td><b>Detailed Reason</b></td>
+      <td>{{rd.detailed_reason}}</td>
+    </tr>
+    {% if difficulty %}
+    <tr>
+    <td><b>Difficulty</b></td>
+    <td>{{rd.is_beginner}}</td>
+    </tr>
+    {% endif %}
+    <tr>
+      <td><b>Contact</b></td>
+      <td>{{rd.contact_link}}</td>
+    </tr>
+  </tbody>
+</table>
+
+
 <br>
 <br>
 <br>

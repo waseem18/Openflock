@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+{% for ud in userdata %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js">
+    </script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="../dist/semantic.css">
+    <link rel="stylesheet" href="../dist/semantic.min.css">
+    <link rel="stylesheet" href="/css/stylesidebar.css">
+    <script src="/js/modernizr.js"></script>
+    <script src="../dist/semantic.js"></script>
+    <script src="../dist/semantic.min.js"></script>
+
+    <title>{{ud.fullname}} | Openflock</title>
+</head>
+
+<body>
+
+
+    <header class="cd-main-header" style="z-index: 2000">
+        <a href="/" class="cd-logo"><img src="../images/logo.png" alt="Logo" width="150px" height="35px" style="margin-top: -6px;">
+        </a>
+
+        {% if navfullname %}
+        <a href="#0" class="cd-nav-trigger">Menu<span></span></a>
+
+        <nav class="cd-nav">
+            <ul class="cd-top-nav">
+
+                <li><a href="/">Home</a>
+                </li>
+                <li><a href="/mypromotedrepos">Activity</a>
+                </li>
+                <li class="has-children account">
+                    <a href="#">
+                        <img src="{{avatar_url}}" alt="avatar"> {{navfullname}}
+                    </a>
+
+                    <ul>
+
+                        <li><a href="http://www.openflock.co/profile/{{navusername}}">My Account</a>
+                        </li>
+                        <li><a href="/auth_redirect">Refresh</a>
+                        </li>
+                        <li><a href="/logout">Logout</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        {% endif %}
+    </header>
+
+    <main class="cd-main-content">
+
+        <div class="content-wrapper" style="margin-top: 20px;">
+
+
+        </div>
+    </main>

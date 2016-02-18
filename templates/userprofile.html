@@ -84,12 +84,11 @@
 
             <a class="github-button" href="https://github.com/{{ud.username}}" data-style="mega" data-count-href="/{{ud.username}}/followers" data-count-api="/users/{{ud.username}}#followers" data-count-aria-label="# followers on GitHub" aria-label="Follow @{{ud.username}} on GitHub">Follow @{{ud.username}}</a>
             {% if ud.fullname == navfullname %}
-             <a class="large ui blue button" style="float: right" href="https://twitter.com/intent/tweet?hashtags=Openflock, Github, Opensource&text=Here's my profile.&url=http://www.openflock.co/profile/{{ud.username}} Start promoting your GitHub repositories on Openflock">Share
+             <a class="large ui blue button" style="float: right" href="https://twitter.com/intent/tweet?hashtags=Openflock, Github, Opensource&text=Here's my profile.http://www.openflock.co/profile/{{ud.username}} Start promoting your GitHub repositories on Openflock">Share
              </a>
             {% else %}
-            <a style="float: right" class="large ui blue button" href="https://twitter.com/intent/tweet?hashtags=Openflock, Github, Opensource&text=This profile looks interesting.&url=http://www.openflock.co/profile/{{ud.username}} Start promoting your GitHub repositories on Openflock">Promote
-                <!--a style="color: white" href="https://twitter.com/intent/tweet?hashtags=Openflock, Github, Opensource&text=This profile looks interesting.&url=http://www.openflock.co/profile/{{ud.username}} Start promoting your GitHub repositories on Openflock"><h2 style"color: white">Share</h2></a-->
-            </a>
+            <a style="float: right" class="large ui blue button" href="https://twitter.com/intent/tweet?hashtags=Openflock, Github, Opensource&text=This profile looks interesting. http://www.openflock.co/profile/{{ud.username}} Start promoting your GitHub repositories on Openflock">Share
+                
 
             {% endif %}
         </div>
