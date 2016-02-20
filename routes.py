@@ -12,5 +12,6 @@ routes = [
     (r'/logout',LogoutHandler),
     (r'/auth_redirect',AuthRedirect),
     (r'/promote_verify',PromoteVerify),
-    (r'/authorization',Authorization)
+    (r'/authorization',Authorization),
+	(r'/halloffame',HallOfFame)
     ]

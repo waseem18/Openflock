@@ -114,7 +114,7 @@ class PromoteHandler(BaseHandler):
 			state = self.request.get('state')
 			is_beginner = self.request.get('isbeginner')
 			genre = self.request.get('genre')
-
+			hof = False
 			if genre == "0":
 				genre=""
 			url_entered = self.request.get('url_entered')
@@ -125,7 +125,7 @@ class PromoteHandler(BaseHandler):
 			if not ud:
 				self.response.out.write("There's no such user")
 				return
-			pi = PromotedRepos(promoting_user=promoting_user,genre=genre,is_beginner=is_beginner,repo_html_url=url_entered,reponame=reponame,promoting_user_avatar=ud.avatar_url,description=description,language=language,simple_reason=simple_reason,detailed_reason=detailed_reason,contact_link=contact_link,issue=issue,state=state)
+			pi = PromotedRepos(promoting_user=promoting_user,hof=hof,genre=genre,is_beginner=is_beginner,repo_html_url=url_entered,reponame=reponame,promoting_user_avatar=ud.avatar_url,description=description,language=language,simple_reason=simple_reason,detailed_reason=detailed_reason,contact_link=contact_link,issue=issue,state=state)
 			pi.put()
 			vid = pi.key().id()
 

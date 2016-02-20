@@ -47,6 +47,7 @@ class RepoEditHandler(BaseHandler):
 			state = self.request.get('state')
 			is_beginner = self.request.get('isbeginner')
 			genre = self.request.get('genre')
+			hof = False
 			if genre == "0":
 				genre=""
 			url_entered = self.request.get('url_entered')

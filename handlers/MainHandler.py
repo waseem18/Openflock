@@ -27,4 +27,14 @@ class MainHandler(BaseHandler):
 			self.render('index.html')
 			
 			
-			
+
+class HallOfFame(BaseHandler):
+	def get(self):
+		if self.session.get('username'):
+			username_session = self.session.get('username')
+			userdata = db.GqlQuery("SELECT * FROM UserData WHERE username= :u",u=username_session)
+			data = db.GqlQuery("SELECT * FROM PromotedRepos WHERE hof= :h",h=True)
+			self.render('HallOfFame.html',data=data,userdata=userdata)
+		else:
+			data = db.GqlQuery("SELECT * FROM PromotedRepos WHERE hof= :h",h=True)
+			self.render('HallOfFame.html',data=data,userdata="")

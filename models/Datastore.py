@@ -48,3 +48,4 @@ class PromotedRepos(db.Model):
 	genre = db.StringProperty()
 	views_of = db.IntegerProperty(default=0)
 	views_gh = db.IntegerProperty(default=0)
+	hof = db.BooleanProperty()
