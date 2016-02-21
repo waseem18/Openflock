@@ -119,8 +119,8 @@ class PromoteHandler(BaseHandler):
 				genre=""
 			url_entered = self.request.get('url_entered')
 			if str(issue) == "none":
-			    issue = False
-				url_entered = "https://github.com/"+str(promoting_user)+"/"+str(reponame)
+			    url_entered = "https://github.com/"+str(promoting_user)+"/"+str(reponame)
+			    issue = 'False'
 
 			ud = db.GqlQuery("SELECT * FROM UserData WHERE username= :u",u=promoting_user).get()
 			if not ud:

@@ -104,8 +104,10 @@
         {% if navfullname == ud.fullname %}
         <a style="float: right" class="large ui blue button" href="/promote/{{rd.reponame}}?project=user"><h3 style="color: white">Promote</h3></a>
         {% endif %}
-
+        
+        {% if rd.language %}
         <p>{{rd.language}}</p>
+        {% endif %}
         <p style="color: gray">{{rd.description}}</p>
         <div class="ui divider"></div>
         {% endfor %}

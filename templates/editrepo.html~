@@ -21,7 +21,7 @@
     <script src="../dist/semantic.js"></script>
     <script src="../dist/semantic.min.js"></script>
     {% for rd in repodata %}
-    <title>Editing {{rd.reponame}}| Openflock</title>
+    <title>{{rd.reponame}}| Openflock</title>
     {% endfor %}
     <style>
     input::-webkit-input-placeholder {
