@@ -44,7 +44,7 @@
 
                     <ul>
 
-                        <li><a href="/profile/{{ud.username}}">My Account</a></li>
+                        <li><a href="http://www.openflock.co/profile/{{ud.username}}">My Account</a></li>
                         <li><a href="/auth_redirect">Refresh</a></li>
                         <li><a href="/logout">Logout</a></li>
                     </ul>
