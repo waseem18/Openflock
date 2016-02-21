@@ -46,8 +46,6 @@
                         <li><a href="/profile/{{ud.username}}">My Account</a></li>
                         <li><a href="/auth_redirect">Refresh</a></li>
                         <li><a href="/logout">Logout</a></li>
-                        <div class="ui divider"></div>
-                        <li><a href="/logout">Logout</a></li>
                     </ul>
 
                     
