@@ -115,7 +115,7 @@
 
 
 <p style="color: gray">{{rd.detailed_reason}}</p>
-<p>Views: {{rd.views_of}}</p>
+<p>{{rd.promoted_time.strftime('%b %d, %y')}} | Views: {{rd.views_of}}</p>
 
 <div class="ui divider"></div>
 {% endfor %}

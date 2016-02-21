@@ -102,11 +102,6 @@ class PromoteHandler(BaseHandler):
 			if len(detailed_reason)>300:
 			    detailed_reason = detailed_reason[:300]
 			contact_link = ""
-			contact_way = self.request.get('contact_way')
-			if contact_way == "mail":
-				contact_link = "mailto:"+self.request.get('contact_link')
-			else:
-				contact_link = self.request.get('contact_link')
 			language = self.request.get('language')
 			if language == "not_related":
 				language = ""
@@ -203,7 +198,7 @@ class MyPromotedRepos(BaseHandler):
 			userdata_get = userdata.get()
 			len_lang_list = len(userdata_get.lang_list)
 			lang_list = userdata_get.lang_list
-			repodata = db.GqlQuery("SELECT * FROM PromotedRepos WHERE promoting_user= :u",u=username)
+			repodata = db.GqlQuery("SELECT * FROM PromotedRepos WHERE promoting_user= :u ",u=username)
 			ispromoted = repodata.fetch(limit=2)
 			notpromoted = ""
 			if len(ispromoted) == 0:

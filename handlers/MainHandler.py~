@@ -25,7 +25,7 @@ class MainHandler(BaseHandler):
 			if repodata.get():
 			    self.render('homepage.html',repodata=repodata,userdata=userdata)
 			else:
-			    self.render('homepage.html',repodata="",userdata=userdata,value=value)
+			    self.render('homepage.html',repodata="",userdata=userdata,f=f)
 		else:
 			self.render('index.html')
 			

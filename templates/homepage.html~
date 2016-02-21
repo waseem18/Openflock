@@ -2,7 +2,7 @@
 
 <head>
     {% for ud in userdata %}
-    <title>{{ud.fullname}} - Openflock</title>
+    <title>Openflock</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
@@ -116,26 +116,26 @@
             </a>
         </div>
         <div style="float: left; text-align: left; margin-left: 23px;">
-            <a href="/?filter=genre&value=Machine_Learning">
-                <p>Machine_Learning</p>
+            <a href="/?filter=genre&value=Machine Learning">
+                <p>Machine Learning</p>
             </a>
             <a href="/?filter=genre&value=WebRTC">
                 <p>WebRTC</p>
             </a>
-            <a href="/?filter=genre&value=Node_module">
-                <p>Node_module</p>
+            <a href="/?filter=genre&value=Node module">
+                <p>Node module</p>
             </a>
-            <a href="/?filter=genre&value=Python_package">
-                <p>Python_package</p>
+            <a href="/?filter=genre&value=Python package">
+                <p>Python package</p>
             </a>
-            <a href="/?filter=genre&value=Javascript_library">
-                <p>Javascript_library</p>
+            <a href="/?filter=genre&value=Javascript library">
+                <p>Javascript library</p>
             </a>
-            <a href="/?filter=genre&value=Normal_script">
-                <p>Normal_script</p>
+            <a href="/?filter=genre&value=Normal script">
+                <p>Normal script</p>
             </a>
-            <a href="/?filter=genre&value=A_Product">
-                <p>A_Product</p>
+            <a href="/?filter=genre&value=A Product">
+                <p>A Product</p> 
             </a>
         </div>
         <div style="float: left; text-align: left; margin-left: 23px;">
@@ -195,10 +195,16 @@
             </ul>
         </nav>
     </header>
-
+    
+    
     <main class="cd-main-content">
         <div class="content-wrapper" style="margin-top: 20px; margin-left: -10px;">
             <div class="ui three stackable cards">
+            
+                {% if repodata == "" %}
+                <h1 style="margin-left: 80px;">Sorry! Currently there's no content on Openflock for this category :(</h1>
+                {% else %}
+            
                 {% for rd in repodata %}
                 <a class="ui card" href="/link/{{rd.uid}}">
                     <div class="content">
@@ -222,13 +228,16 @@
                         </div>
                     </div>
                     <div class="extra content">
+                        <div class="left floated author">
+                            <p>{{rd.promoted_time.strftime('%b %d, %y')}}</p>
+                        </div>
                         <div class="right floated author">
                             <img class="ui avatar image" src="{{rd.promoting_user_avatar}}">{{rd.promoting_user}}
                         </div>
                     </div>
                 </a>
                 {% endfor %}
-
+                {% endif %}
             </div>
 
         </div>

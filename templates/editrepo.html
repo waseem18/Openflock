@@ -125,56 +125,89 @@ setInterval(function(){CharacterCount('content_txt','message')},55);
   
   <p style="color: black; font-size: 19px">{{rd.language}}</p>
   <input type="hidden" value="{{rd.language}}" name="language">
-<a class="github-button" href="https://github.com/{{username}}/{{rd.reponame}}" data-icon="octicon-star" data-style="mega" data-count-href="/{{username}}/{{rd.reponame}}/stargazers" data-count-api="/repos/{{username}}/{{rd.reponame}}#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star ntkme/github-buttons on GitHub">Star</a>
+<!--a class="github-button" href="https://github.com/{{username}}/{{rd.reponame}}" data-icon="octicon-star" data-style="mega" data-count-href="/{{username}}/{{rd.reponame}}/stargazers" data-count-api="/repos/{{username}}/{{rd.reponame}}#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star ntkme/github-buttons on GitHub">Star</a>
 &nbsp;&nbsp;
 
 <a class="github-button" href="https://github.com/{{username}}/{{rd.reponame}}/fork" data-icon="octicon-repo-forked" data-style="mega" data-count-href="/{{username}}/{{rd.reponame}}/network" data-count-api="/repos/{{username}}/{{rd.reponame}}}#forks_count" data-count-aria-label="# forks on GitHub" aria-label="Fork {{username}}/{{rd.reponame}} on GitHub">Fork</a>
 &nbsp;&nbsp;
 
-<a class="github-button" href="https://github.com/{{username}}/{{rd.reponame}}" data-icon="octicon-eye" data-style="mega" data-count-href="/{{username}}/{{rd.reponame}}/watchers" data-count-api="/repos/{{username}}/{{rd.reponame}}#subscribers_count" data-count-aria-label="# watchers on GitHub" aria-label="Watch {{username}}/{{rd.reponame}} on GitHub">Watch</a>
-<button style="float: right" class="ui primary button">
-  <h2>Contact</h2>
-</button>
+<a class="github-button" href="https://github.com/{{username}}/{{rd.reponame}}" data-icon="octicon-eye" data-style="mega" data-count-href="/{{username}}/{{rd.reponame}}/watchers" data-count-api="/repos/{{username}}/{{rd.reponame}}#subscribers_count" data-count-aria-label="# watchers on GitHub" aria-label="Watch {{username}}/{{rd.reponame}} on GitHub">Watch</a-->
 </div>
 
 
 
 
 <label><h2>Reason to promote the repository!</h2></label>
-  <input type="text" width="50px" name="reason" value="{{rd.simple_reason}}">
+  <!--input type="text" width="50px" name="reason" value="{{rd.simple_reason}}"-->
 
 <div class="ui form">
   <div class="grouped fields">
     
-
+    {% if rd.simple_reason == 'Resolve Issue' %}
     <div class="field">
       <div class="ui radio checkbox">
-        <input type="radio" name="reason" value="ResolveAnIssue">
-        <label><p style="font-size: 14px;">ResolveAnIssue</p></label>
+        <input type="radio" name="reason" value="Resolve Issue" checked="checked">
+        <label><p style="font-size: 14px;">Resolve Issue</p></label>
       </div>
     </div>
-    
-        <div class="field">
-      <div class="ui radio checkbox">
-        <input type="radio" name="reason" value="FeatureRequest">
-        <label><p style="font-size: 14px;">FeatureRequest</p></label>
-      </div>
-    </div>
-    
+    {% else %}
     <div class="field">
       <div class="ui radio checkbox">
-        <input type="radio" name="reason" value="CodeRefactoring">
-        <label><p style="font-size: 14px;">CodeRefactoring</p></label>
+        <input type="radio" name="reason" value="Resolve Issue">
+        <label><p style="font-size: 14px;">Resolve Issue</p></label>
       </div>
     </div>
-
+    {% endif %}
     
+    {% if rd.simple_reason == 'Feature Request'%}    
         <div class="field">
       <div class="ui radio checkbox">
-        <input type="radio" name="reason" value="JustPromoting">
-        <label><p style="font-size: 14px;">JustPromoting</p></label>
+        <input type="radio" name="reason" value="Feature Request" checked="checked">
+        <label><p style="font-size: 14px;">Feature Request</p></label>
       </div>
     </div>
+    {% else %}
+    <div class="field">
+      <div class="ui radio checkbox">
+        <input type="radio" name="reason" value="Feature Request">
+        <label><p style="font-size: 14px;">Feature Request</p></label>
+      </div>
+    </div>
+    {% endif %}
+    
+    
+    
+    {% if rd.simple_reason == 'Code Refactoring' %}
+    <div class="field">
+      <div class="ui radio checkbox">
+        <input type="radio" name="reason" value="Code Refactoring" checked="checked">
+        <label><p style="font-size: 14px;">Code Refactoring</p></label>
+      </div>
+    </div>
+    {% else %}
+    <div class="field">
+      <div class="ui radio checkbox">
+        <input type="radio" name="reason" value="Code Refactoring">
+        <label><p style="font-size: 14px;">Code Refactoring</p></label>
+      </div>
+    </div>
+    {% endif %}
+
+        {% if rd.simple_reason == 'Just Promoting' %}
+        <div class="field">
+      <div class="ui radio checkbox">
+        <input type="radio" name="reason" value="Just Promoting" checked="checked">
+        <label><p style="font-size: 14px;">Just Promoting</p></label>
+      </div>
+    </div>
+    {% else %}
+    <div class="field">
+      <div class="ui radio checkbox">
+        <input type="radio" name="reason" value="Just Promoting">
+        <label><p style="font-size: 14px;">Just Promoting</p></label>
+      </div>
+    </div>
+    {% endif %}
   </div>
 </div>
 
@@ -200,12 +233,31 @@ setInterval(function(){CharacterCount('content_txt','message')},55);
 
 <div id="isbeginner">
   <label><h2>Is the Issue for Beginners?</h2></label>
+  {% if rd.is_beginner == 'Beginner' %}
+  <input type="radio" name="isbeginner" value="beginner" checked="checked">&nbsp;Beginner level&nbsp;&nbsp;
+  {% else %}
   <input type="radio" name="isbeginner" value="beginner">&nbsp;Beginner level&nbsp;&nbsp;
-  <input type="radio" name="isbeginner" value="no">&nbsp;Not a beginner level&nbsp;&nbsp;
-  <input type="radio" name="isbeginner" value="notrelated">&nbsp;Not related
+  {% endif %}
+  
+  
+  {% if rd.is_beginner == 'Not Beginner' %}
+  <input type="radio" name="isbeginner" value="Not Beginner" checked="checked">&nbsp;Not Beginner level&nbsp;&nbsp;
+  {% else %}
+  <input type="radio" name="isbeginner" value="Not Beginner">&nbsp;Not Beginner level&nbsp;&nbsp;
+  {% endif %}
+  
+  {% if rd.is_beginner == 'Not related' %}
+  <input type="radio" name="isbeginner" value="Not related" checked="checked">&nbsp;Not related&nbsp;&nbsp;
+  {% else %}
+  <input type="radio" name="isbeginner" value="Not related">&nbsp;Not related&nbsp;&nbsp;
+  {% endif %}
+  
 </div>
+
 <br>
+
 <div class="ui divider"></div>
+
 <div id="genre">
   <label><h2>Select a genre of the project/issue</h2></label>
   <select name="genre">
@@ -215,12 +267,12 @@ setInterval(function(){CharacterCount('content_txt','message')},55);
   <option value="Webapp2">Webapp2</option>
   <option value="Rails">Ruby on Rails</option> 
   <option value="WebRTC">WebRTC</option>
-  <option value="Node_module">Node_module</option>
-  <option value="Python_package">Python package</option> 
-  <option value="Javascript_library">Javascript library</option>
-  <option value="Normal_script">Normal script</option>
-  <option value="A_Product">A Product</option>
-  <option value="Machine_Learning">Machine Learning</option>
+  <option value="Node module">Node module</option>
+  <option value="Python package">Python package</option> 
+  <option value="Javascript library">Javascript library</option>
+  <option value="Normal script">Normal script</option>
+  <option value="A Product">A Product</option>
+  <option value="Machine Learning">Machine Learning</option>
 </select>
 
 <div class="ui divider"></div>

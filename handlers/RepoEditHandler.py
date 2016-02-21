@@ -17,6 +17,7 @@ class RepoEditHandler(BaseHandler):
 				state = 'none'
 			url = self.request.get('url')
 			verify = db.GqlQuery("SELECT * FROM PromotedRepos WHERE uid= :r",r=old_uid).get()
+			#verify is NONE : BUG
 			if str(verify.promoting_user) != str(username_session):
 				self.response.out.write("You cannot edit someone else's promoted repository!")
 				return

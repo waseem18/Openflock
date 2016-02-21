@@ -96,6 +96,7 @@
 <a class="github-button" href="https://github.com/ntkme/github-buttons" data-icon="octicon-eye" data-style="mega" data-count-href="/ntkme/github-buttons/watchers" data-count-api="/repos/ntkme/github-buttons#subscribers_count" data-count-aria-label="# watchers on GitHub" aria-label="Watch ntkme/github-buttons on GitHub">Watch</a>
 {% if username == rd.promoting_user %}
   <a class = "large ui blue button" href="/edit/{{rd.uid}}?issue={{rd.issue}}&url={{rd.repo_html_url}}" style="color: white; float: right"><h2>Edit details</h2></a>
+    <a class = "large ui blue button" href="https://twitter.com/intent/tweet?hashtags=Openflock, Github, Opensource&text=Checkout my project on Openflock.{{rd.key.id_or_name()}} Start promoting your GitHub repositories on Openflock" style="color: white; float: right"><h2>Share</h2></a>
   <br>
 
 {% endif %}

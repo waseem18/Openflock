@@ -44,7 +44,7 @@
 
                     <ul>
 
-                        <li><a href="http://www.openflock.co/profile/{{ud.username}}">My Account</a></li>
+                        <li><a href="/profile/{{ud.username}}">My Account</a></li>
                         <li><a href="/auth_redirect">Refresh</a></li>
                         <li><a href="/logout">Logout</a></li>
                     </ul>
@@ -115,7 +115,7 @@
 
 
 <p style="color: gray">{{rd.detailed_reason}}</p>
-<p>Views: {{rd.views_of}}</p>
+<p>Promoted on : {{rd.promoted_time.strftime('%b %d, %y')}} | Views: {{rd.views_of}}</p>
 
 <div class="ui divider"></div>
 {% endfor %}

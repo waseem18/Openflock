@@ -124,7 +124,7 @@ setInterval(function(){CharacterCount('content_txt','message')},55);
   {% endif %}
 
   {% if flag %}
-  <p style="color: blue; font-size: 19px">{{url_entered}}</p>
+  <a style="color: blue; font-size: 19px" href="{{url_entered}}">{{url_entered}}</a>
   <input type="hidden" value="{{url_entered}}" name="url_entered">
   {% else %}
   <p style="color: blue; font-size: 19px">{{repo_html_url}}</p>
@@ -236,8 +236,6 @@ setInterval(function(){CharacterCount('content_txt','message')},55);
 
 <br>
 <label><h2>How can contributors contact you? (Eg: Gitter link, GitHub Issues link, Slack...)</h2></label>
-    <input type="radio" name="contact_way" value="mail"><span style="font-size: 15px;" REQUIRED>Email</span>&nbsp;&nbsp;
-    <input type="radio" name="contact_way" value="link"><span style="font-size: 15px;">Link</span>
 <div class="ui form">
   <div class="field">
     <!--label><h2>How can contributors contact you? (Eg: Gitter link, GitHub Issues link, Slack...)</h2></label>
