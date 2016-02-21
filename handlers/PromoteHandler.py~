@@ -119,6 +119,7 @@ class PromoteHandler(BaseHandler):
 				genre=""
 			url_entered = self.request.get('url_entered')
 			if str(issue) == "none":
+			    issue = False
 				url_entered = "https://github.com/"+str(promoting_user)+"/"+str(reponame)
 
 			ud = db.GqlQuery("SELECT * FROM UserData WHERE username= :u",u=promoting_user).get()
@@ -175,10 +176,10 @@ class PromoteVerify(BaseHandler):
 				cire = requests.get('https://api.github.com/repos/'+str(split_result.path.split('/')[1])+'/'+str(split_result.path.split('/')[2])+'?access_token='+str(userdata.access_token))
 				#self.response.out.write(cire.status_code)
 				if cire.status_code == 200 and len(split_result.path.split('/'))==3:
-					self.redirect('http://www.openflock.co/promote'+'/'+str(split_result.path.split('/')[2])+'?project=org&organization='+str(split_result.path.split('/')[1]))
+					self.redirect('/promote'+'/'+str(split_result.path.split('/')[2])+'?project=org&organization='+str(split_result.path.split('/')[1]))
 				elif cire.status_code==200 and len(split_result.path.split('/'))==5 and split_result.path.split('/')[3]=="issues" and split_result.path.split('/')[4]:
 					issue_id = split_result.path.split('/')[4]
-					self.redirect('http://www.openflock.co/promote/'+str(split_result.path.split('/')[2])+'?issue=True&id='+str(issue_id)+'&url_entered='+str(url_entered)+'&project=org&organization='+str(split_result.path.split('/')[1]))
+					self.redirect('/promote/'+str(split_result.path.split('/')[2])+'?issue=True&id='+str(issue_id)+'&url_entered='+str(url_entered)+'&project=org&organization='+str(split_result.path.split('/')[1]))
 				else:
 					self.response.out.write("<h3>There's something wrong with the url. Check the URL once clearly.</h3>")
 
