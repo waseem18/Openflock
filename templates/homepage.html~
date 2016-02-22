@@ -11,11 +11,11 @@
     <link rel="stylesheet" href="dist/semantic.css">
     <link rel="stylesheet" href="/css/remodal.css">
     <link rel="stylesheet" href="css/remodal-default-theme.css">
-    <link rel="stylesheet" href="dist/semantic.min.css">
+    <!--link rel="stylesheet" href="dist/semantic.min.css"-->
     <link rel="stylesheet" href="css/stylesidebar.css">
     <script src="/js/modernizr.js"></script>
     <script src="../dist/semantic.js"></script>
-    <script src="../dist/semantic.min.js"></script>
+    <!--script src="../dist/semantic.min.js"></script-->
     <script src="/js/pretty.js" type="text/javascript"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     
@@ -221,7 +221,11 @@
                                 {{rd.genre}}
                                 |
                                 {% endif %} 
-                                {{rd.simple_reason}}</p>
+                                {{rd.simple_reason}}
+                                {% if rd.hof %}
+                                 | Hall Of Fame
+                                {% endif %}
+                                </p>
                         </div>
                         <div class="description">
                             <p>{{rd.detailed_reason}}</p>
