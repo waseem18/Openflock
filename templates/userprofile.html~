@@ -13,11 +13,11 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script-->
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="../dist/semantic.css">
-    <!--link rel="stylesheet" href="../dist/semantic.min.css"-->
+    <link rel="stylesheet" href="../dist/semantic.min.css">
     <link rel="stylesheet" href="/css/stylesidebar.css">
     <script src="/js/modernizr.js"></script>
     <script src="../dist/semantic.js"></script>
-    <!--script src="../dist/semantic.min.js"></script-->
+    <script src="../dist/semantic.min.js"></script>
 
     <title>{{ud.fullname}} | Openflock</title>
 </head>
