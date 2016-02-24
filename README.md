@@ -18,7 +18,7 @@
 * Clone the repository.
 * Download Semantic-UI 2.1.8 (https://github.com/Semantic-Org/Semantic-UI/releases/tag/2.1.8), extract it and place the extracted content in the folder `/static/dist/`. 
 * Run the command `python /path/of/dev_appserver.py /path/of/Openflock` (`dev_appserver.py` lies in google_appengine folder)
-* Now you can find Openflock running `localhost:8080` and admin server running at `localhost:8000`.
+* Now you can find Openflock running on `localhost:8080` and admin server running on `localhost:8000`.
 * Openflock runs on GitHub API. To run Openflock locally, you also need a GitHub client id and client secret id. So [register](https://github.com/settings/applications/new) your GitHub application with `Homepage url` as `http://localhost:8080` and `callback url` as `http://localhost:9000/authorization`. Now you have a client id and client secret id.
 * Now open `/handlers/LoginHandler.py` and place client id, client secret id, callback url in the places mentioned in the `LoginHandler.py` file.
 * Run the command `python /path/of/dev_appserver.py /path/of/Openflock` (`dev_appserver.py` lies in google_appengine folder)
