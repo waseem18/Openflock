@@ -1,4 +1,5 @@
 #[Openflock](http://www.openflock.co)
+![Openflock](http://www.openflock.co/images/of.png)
 
 Gain contributors to your project or get your issues resolved by promoting them on Openflock.
 * Find awesome projects or issues to work on. Also filter your feed according to your favourite language or topic.
@@ -26,4 +27,5 @@ Gain contributors to your project or get your issues resolved by promoting them 
 ###Note
 * I think the code I wrote is not so efficient. Kindly forgive me for this.
 * I hope to receive contributions from the community to improve Openflock :)
+
 
