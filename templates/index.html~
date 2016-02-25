@@ -252,7 +252,14 @@ You start by working through our self-paced, browser-based full stack JavaScript
   <div class="content">
     <p class="transition hidden">Openflock is a product to promote your opensource projects on GitHub and gain contributors. It also helps you in finding awesome projects or issues to work on.</p>
   </div>
-  
+  <!--div class="title">
+    <i class="dropdown icon"></i>
+    What kinds of dogs are there?
+  </div>
+  <div class="content">
+    <p>There are many breeds of dogs. Each breed varies in size and temperament. Owners often select a breed of dog that they find to be compatible with their own lifestyle and desires from a companion.</p>
+  </div-->
+  <div class="title">
     <i class="dropdown icon"></i>
     What is Openflock Hall of Fame?
   </div>

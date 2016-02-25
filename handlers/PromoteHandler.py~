@@ -164,6 +164,7 @@ class PromoteVerify(BaseHandler):
 				#self.response.out.write("User is trying to promote a repo from his organization!"+str(split_result.path.split('/')[1]))
 				#check if repo exists - cire
 				cire = requests.get('https://api.github.com/repos/'+str(split_result.path.split('/')[1])+'/'+str(split_result.path.split('/')[2])+'?access_token='+str(userdata.access_token))
+				#self.response.out.write(cire.status_code)
 				if cire.status_code == 200 and len(split_result.path.split('/'))==3:
 					self.redirect('/promote'+'/'+str(split_result.path.split('/')[2])+'?project=org&organization='+str(split_result.path.split('/')[1]))
 				elif cire.status_code==200 and len(split_result.path.split('/'))==5 and split_result.path.split('/')[3]=="issues" and split_result.path.split('/')[4]:

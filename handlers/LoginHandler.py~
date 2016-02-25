@@ -36,8 +36,14 @@ class Authorization(BaseHandler):
 		user_json_data = requests.get(user_api_url,headers=headers)
 		d = json.loads(user_json_data.content)
 		username = d['login']
+		#q = db.GqlQuery("SELECT * FROM UserData WHERE username= :u",u=username).fetch(limit=2)
+
+		i#f len(q)>0:
+		#	promoted_data_user = db.GqlQuery("SELECT * FROM PromotedRepos WHERE promoting_user= :1",username).fetch(limit=50)
+		#	user_data =  db.GqlQuery("SELECT * FROM UserData WHERE username= :1",username).get()
 
 		self.response.out.write(str(access_token)+user_api_url)
+		#return
 		if d['name']:
 			fullname = d['name']
 		else:

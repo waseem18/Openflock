@@ -4,11 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"> </script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script-->
     <link rel="stylesheet" href="/css/reset.css"> 
     <link rel="stylesheet" href="../dist/semantic.css">
+    <!--link rel="stylesheet" href="../dist/semantic.min.css"-->
     <link rel="stylesheet" href="/css/stylesidebar.css"> 
     <script src="/js/modernizr.js"></script> 
     <script src="../dist/semantic.js"></script>
+    <!--script src="../dist/semantic.min.js"></script-->
 
     <title>{{ud.fullname}} - Promoted repos - Openflock</title>
 </head>

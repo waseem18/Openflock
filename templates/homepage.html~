@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="dist/semantic.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.0.5/remodal.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.0.5/remodal-default-theme.css">
-    <!--link rel="stylesheet" href="dist/semantic.min.css"-->
     <link rel="stylesheet" href="css/stylesidebar.css">
     <script src="/js/modernizr.js"></script>
     <script src="../dist/semantic.js"></script>
@@ -166,7 +165,7 @@
         
         
         <div style="float: left; text-align: left; margin-left: 0px;">
-            <a href="/?filter=Frontend">
+            <a href="/?filter=genre&value=Frontend">
                 <p>Frontend</p>
             </a>
             <a href="/?filter=genre&value=Operating Systems">

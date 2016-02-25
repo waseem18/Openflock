@@ -9,9 +9,11 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="../dist/semantic.css">
+    <!--link rel="stylesheet" href="../dist/semantic.min.css"-->
     <link rel="stylesheet" href="/css/stylesidebar.css">
     <script src="/js/modernizr.js"></script>
     <script src="../dist/semantic.js"></script>
+    <!--script src="../dist/semantic.min.js"></script-->
 
     <title>{{ud.fullname}} | Openflock</title>
 </head>

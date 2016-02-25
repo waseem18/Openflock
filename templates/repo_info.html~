@@ -5,16 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
-    <!--script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"> </script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script-->
     <link rel="stylesheet" href="/css/reset.css"> 
     <link rel="stylesheet" href="../dist/semantic.css">
-    <!--link rel="stylesheet" href="../dist/semantic.min.css"-->
     <link rel="stylesheet" href="/css/stylesidebar.css"> 
     <script src="/js/modernizr.js"></script>
     <script src="../dist/semantic.js"></script>
-    <!--script src="../dist/semantic.min.js"></script-->
     {% for rd in repodata %}
     <title>{{rd.reponame}}| Openflock</title>
     {% endfor %}
@@ -93,7 +88,7 @@
 <a class="github-button" href="https://github.com/{{rd.promoting_user}}/{{rd.reponame}}/fork" data-icon="octicon-repo-forked" data-style="mega" data-count-href="/{{rd.promoting_user}}/{{rd.reponame}}/network" data-count-api="/repos/{{rd.promoting_user}}/{{rd.reponame}}#forks_count" data-count-aria-label="# forks on GitHub" aria-label="Fork {{rd.promoting_user}}/{{rd.reponame}} on GitHub">Fork</a>
 &nbsp;&nbsp;
 
-<a class="github-button" href="https://github.com/ntkme/github-buttons" data-icon="octicon-eye" data-style="mega" data-count-href="/ntkme/github-buttons/watchers" data-count-api="/repos/ntkme/github-buttons#subscribers_count" data-count-aria-label="# watchers on GitHub" aria-label="Watch ntkme/github-buttons on GitHub">Watch</a>
+<a class="github-button" href="https://github.com/{{rd.promoting_user}}/{{rd.reponame}}" data-icon="octicon-eye" data-style="mega" data-count-href="/{{rd.promoting_user}}/{{rd.reponame}}/watchers" data-count-api="/repos/{{rd.promoting_user}}/{{rd.reponame}}#subscribers_count" data-count-aria-label="# watchers on GitHub" aria-label="Watch {{rd.promoting_user}}/{{rd.reponame}} on GitHub">Watch</a>
 {% if username == rd.promoting_user %}
   <a class = "large ui blue button" href="/edit/{{rd.uid}}?issue={{rd.issue}}&url={{rd.repo_html_url}}" style="color: white; float: right"><h2>Edit details</h2></a>
   <br>
@@ -104,19 +99,7 @@
 
 
 
-<!--div class="ui massive message">
-  <h2><span style="color: black">Reason to promote : </span>{{rd.simple_reason}}</h2>
-  <h2><span style="color: black">Language : </span>{{rd.language}}</h2>
-{% if genre %}
-  <h2><span style="color: black">Genre : </span>{{rd.genre}}</h2>
-{% endif %}
-  <h2><span style="color: black">Detailed reason : </span>{{rd.detailed_reason}}</h2>
-{% if difficulty %}
-  <h2><span style="color: black">Difficulty: </span>{{rd.is_beginner}}</h2>
-{% endif %}
-  <h2><span style="color: black">Link to contact : </span><a target="_blank" href="{{rd.contact_link}}">{{rd.contact_link}}</a></h2>
 
-</div-->
 
 
 

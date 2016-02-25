@@ -4,18 +4,11 @@
     {% for ud in userdata %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!--link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'-->
-    <!--script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"> </script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script-->
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="../dist/semantic.css">
-    <!--link rel="stylesheet" href="../dist/semantic.min.css"-->
     <link rel="stylesheet" href="/css/stylesidebar.css">
     <script src="/js/modernizr.js"></script> 
-        <script src="../dist/semantic.js"></script>
-    <!--script src="../dist/semantic.min.js"></script-->
+    <script src="../dist/semantic.js"></script>
 
     <title>Openflock| Promoting a repository</title>
     <style>
@@ -208,7 +201,7 @@ setInterval(function(){CharacterCount('content_txt','message')},55);
 
 <div id="genre">
   <label><h2>Select a genre of the project/issue</h2></label>
-<select name="genre">
+  <select name="genre">
   <option value="0">Select a genre</option> 
   <option value="Appengine">Appengine</option> 
   <option value="Django">Django</option>
@@ -221,9 +214,21 @@ setInterval(function(){CharacterCount('content_txt','message')},55);
   <option value="Normal script">Normal script</option>
   <option value="A Product">A Product</option>
   <option value="Machine Learning">Machine Learning</option>
-</select>
+  <option value="Terminal client">Terminal Client</option>
+  <option value="Servlets">Servlets</option>
+  <option value="Curated list">Curated list</option>
+  <option value="AWS">AWS</option>
+  <option value="Backend">Backend</option>
+  <option value="Frontend">Frontend</option>
+  <option value="Operating Systems">Operating Systems</option>
+  <option value="Compilers">Compilers</option>
+  <option value="API">API</option>
+  <option value="NLP">NLP</option>
+  <option value="Chat">Chat</option>
+  <option value="Database">Database</option>
+  <option value="Community">Community</option>
+  </select>
 <br>
-
 <div class="ui divider"></div>
 <br>
 
