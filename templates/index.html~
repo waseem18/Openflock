@@ -202,7 +202,37 @@
               
           </div>
 
-                    
+                    <div class="column">
+          
+              <div class="ui card" >
+    
+    <div class="content">
+      <div class="header"><a href="https://github.com/feross/webtorrent">WebTorrent</a></div>
+      <div class="description">
+        WebTorrent is a streaming torrent client for node.js and the browser. The WebTorrent protocol works just like BitTorrent protocol, except it uses WebRTC.
+
+      </div>
+    </div>
+
+  </div>
+              
+          </div>
+
+                    <div class="column">
+          
+              <div class="ui card" >
+    
+    <div class="content">
+      <div class="header"><a href="https://github.com/FreeCodeCamp/FreeCodeCamp">Free Code Camp</a></div>
+      <div class="description">
+        Free Code Camp is an open-source community where you learn to code and help nonprofits.
+You start by working through our self-paced, browser-based full stack JavaScript curriculum.
+      </div>
+    </div>
+
+  </div>
+              
+          </div>
           
           
           
