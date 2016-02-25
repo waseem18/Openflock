@@ -63,6 +63,8 @@ class PromoteHandler(BaseHandler):
 				params['description'] = str(repodata.description)
 				params['repo_html_url'] = str(repodata.repo_html_url)
 				language = str(repodata.language)
+				#self.response.out.write(reponame)
+				#return
 				if language == "none":
 					language=""
 				params['flag'] = ""

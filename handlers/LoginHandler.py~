@@ -5,8 +5,8 @@ from handlers import *
 from models import *
 
 redirect__uri = 'http://www.openflock.co/authorization'
-client__id = 'ADD YOUR CLIENT_ID HERE'
-client__secret = 'ADD YOUR CLIENT SECRET ID HERE'
+client__id = '5a4a66d84435ef705a81'
+client__secret = '5c184ad769eae63029caef8d1f5d0708aa5d8145'
 
 
 class AuthRedirect(BaseHandler):
