@@ -17,8 +17,6 @@ class RepoEditHandler(BaseHandler):
 				state = 'none'
 			url = self.request.get('url')
 			v = db.GqlQuery("SELECT * FROM PromotedRepos WHERE uid= :r",r=old_uid).fetch(limit=2)
-			if len(v) == 0:
-			    self.response.out.write("")
 			
 			verify = db.GqlQuery("SELECT * FROM PromotedRepos WHERE uid= :r",r=old_uid).get()
 			

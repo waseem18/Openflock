@@ -87,13 +87,13 @@
   <p style="color: black; font-size: 19px">Language : {{rd.language}}</p>
   {% endif %}
   
-<a class="github-button" href="https://github.com/ntkme/github-buttons" data-icon="octicon-star" data-style="mega" data-count-href="/ntkme/github-buttons/stargazers" data-count-api="/repos/ntkme/github-buttons#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star ntkme/github-buttons on GitHub">Star</a>
+<a class="github-button" href="https://github.com/{{rd.promoting_user}}/{{rd.reponame}}" data-icon="octicon-star" data-style="mega" data-count-href="/{{rd.promoting_user}}/{{rd.reponame}}/stargazers" data-count-api="/repos/{{rd.promoting_user}}/{{rd.reponame}}#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star {{rd.promoting_user}}/{{rd.reponame}} on GitHub">Star</a>
 &nbsp;&nbsp;
 
-<a class="github-button" href="https://github.com/ntkme/github-buttons/fork" data-icon="octicon-repo-forked" data-style="mega" data-count-href="/ntkme/github-buttons/network" data-count-api="/repos/ntkme/github-buttons#forks_count" data-count-aria-label="# forks on GitHub" aria-label="Fork ntkme/github-buttons on GitHub">Fork</a>
+<a class="github-button" href="https://github.com/{{rd.promoting_user}}/{{rd.reponame}}/fork" data-icon="octicon-repo-forked" data-style="mega" data-count-href="/{{rd.promoting_user}}/{{rd.reponame}}/network" data-count-api="/repos/{{rd.promoting_user}}/{{rd.reponame}}#forks_count" data-count-aria-label="# forks on GitHub" aria-label="Fork {{rd.promoting_user}}/{{rd.reponame}} on GitHub">Fork</a>
 &nbsp;&nbsp;
 
-<a class="github-button" href="https://github.com/ntkme/github-buttons" data-icon="octicon-eye" data-style="mega" data-count-href="/ntkme/github-buttons/watchers" data-count-api="/repos/ntkme/github-buttons#subscribers_count" data-count-aria-label="# watchers on GitHub" aria-label="Watch ntkme/github-buttons on GitHub">Watch</a>
+<a class="github-button" href="https://github.com/{{rd.promoting_user}}/{{rd.reponame}}" data-icon="octicon-eye" data-style="mega" data-count-href="/{{rd.promoting_user}}/{{rd.reponame}}/watchers" data-count-api="/repos/{{rd.promoting_user}}/{{rd.reponame}}#subscribers_count" data-count-aria-label="# watchers on GitHub" aria-label="Watch {{rd.promoting_user}}/{{rd.reponame}} on GitHub">Watch</a>
 {% if username == rd.promoting_user %}
   <a class = "large ui blue button" href="/edit/{{rd.uid}}?issue={{rd.issue}}&url={{rd.repo_html_url}}" style="color: white; float: right"><h2>Edit details</h2></a>
   <br>

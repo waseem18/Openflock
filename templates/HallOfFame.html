@@ -76,20 +76,22 @@
                         <div class="header"><span style="color: black">{{rd.reponame}}</span>
                         </div>
                         <div class="meta">
-                            <p style="color: #ff7e66; font-size: 14px;">
-                            Python | GUI</p>
+                            <p style="color: #ff7e66; font-size: 14px;">            
+                                {% if rd.genre %}
+                                {{rd.genre}}
+                                |
+                                {% endif %} 
+                                {{rd.simple_reason}}
+                                {% if rd.hof %}
+                                 | Hall Of Fame
+                                {% endif %}
+                            </p>
                         </div>
                         <div class="description">
-                            <p>Here goes the information about the repository and details about how the project is helping the opensource community</p>
+                            <p>{{rd.description}}</p>
                         </div>
                     </div>
                     <div class="extra content">
-                        <div class="left floated author">
-                            Gratipay
-                        </div>
-						<div class="right floated author">
-                            Flattr
-                        </div>
                     </div>
                 </a>
                 {% endfor %}

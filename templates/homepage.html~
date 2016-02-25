@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="dist/semantic.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.0.5/remodal.css">
-    <link rel="stylesheet" href="css/remodal-default-theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.0.5/remodal-default-theme.css">
     <!--link rel="stylesheet" href="dist/semantic.min.css"-->
     <link rel="stylesheet" href="css/stylesidebar.css">
     <script src="/js/modernizr.js"></script>
@@ -138,11 +138,47 @@
                 <p>A Product</p> 
             </a>
         </div>
+        
+        
         <div style="float: left; text-align: left; margin-left: 23px;">
-            <a href="/?filter=bitesize">
+            <a href="/?filter=genre&value=Terminal Client">
+                <p>Terminal Client</p>
+            </a>
+            <a href="/?filter=genre&value=API">
+                <p>API</p>
+            </a>
+            <a href="/?filter=genre&value=NLP">
+                <p>NLP</p>
+            </a>
+            <a href="/?filter=genre&value=Servlets">
+                <p>Servlets</p>
+            </a>
+            <a href="/?filter=genre&value=Curated list">
+                <p>Curated list</p>
+            </a>
+            <a href="/?filter=genre&value=AWS">
+                <p>AWS</p>
+            </a>
+            <a href="/?filter=genre&value=Backend">
+                <p>Backend</p> 
+            </a>
+        </div>
+        
+        
+        <div style="float: left; text-align: left; margin-left: 0px;">
+            <a href="/?filter=Frontend">
+                <p>Frontend</p>
+            </a>
+            <a href="/?filter=genre&value=Operating Systems">
+                <p>Operating Systems</p>
+            </a>
+            <a href="/?filter=genre&value=Compilers">
+                <p>Compilers</p>
+            </a>
+            <a href="/?filter=genre&value=bitesize">
                 <p>Bitesize</p>
             </a>
-
+            
         </div>
 
     </div>
