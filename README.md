@@ -10,7 +10,6 @@ Gain contributors to your project or get your issues resolved by promoting them 
  
 * Openflock has been written in Python (Webapp2 framework) on top of Google App Engine.
 * We use Google datastore to store data.
-* Forgive me if the code is inefficient. I hope to receive contributions from you ;)
 
 
 ####Here's how you can install Openflock locally...
@@ -23,9 +22,5 @@ Gain contributors to your project or get your issues resolved by promoting them 
 * Run the command `python /path/of/dev_appserver.py /path/of/Openflock` (`dev_appserver.py` lies in google_appengine folder)
 * Now you can find Openflock running `localhost:8080` and admin server running at `localhost:8000`.
 * Raise an issue or contact me if you face any problems in installing Openflock locally.
-
-###Note
-* I think the code I wrote is not so efficient. Kindly forgive me for this.
-* I hope to receive contributions from the community to improve Openflock :)
 
 
