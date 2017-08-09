@@ -5,14 +5,13 @@ Gain contributors to your project or get your issues resolved by promoting them 
 * Find awesome projects or issues to work on. Also filter your feed according to your favourite language or topic.
 * Is your Open source project really useful for the community? Fill in [this form](http://goo.gl/forms/5jLE4J89gK) to get your project on Openflock Hall of Fame.
 
-* 
-###Install
+### Install
  
 * Openflock has been written in Python (Webapp2 framework) on top of Google App Engine.
 * We use Google datastore to store data.
 
 
-####Here's how you can install Openflock locally...
+#### Here's how you can install Openflock locally...
 
 * [Download Google App Engine](https://cloud.google.com/appengine/downloads#Google_App_Engine_SDK_for_Python)
 * Clone the repository.
